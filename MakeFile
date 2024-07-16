@@ -1,0 +1,11 @@
+APPLICATION_NAME = text_analyser
+
+lint:  ##@Code Check code with pylint
+	poetry run python -m pylint $(APPLICATION_NAME)
+
+format:  ##@Code Reformat code with isort and black
+	poetry run python -m isort $(APPLICATION_NAME)
+	poetry run python -m black $(APPLICATION_NAME)
+
+run:  ##@Application Run application server
+	poetry run fastapi dev text_analyser/__main__.py

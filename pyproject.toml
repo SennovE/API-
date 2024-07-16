@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "text-analyser"
+version = "0.1.0"
+description = "A microservice that allows you to analyze text."
+authors = ["Egor Sennov <esennov2005@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.1"
+textblob = "^0.18.0.post0"
+langdetect = "^1.0.9"
+iso639-lang = "^2.2.3"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+isort = "^5.10.1"
+pylint = "^2.14.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
